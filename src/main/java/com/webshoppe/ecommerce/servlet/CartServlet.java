@@ -34,7 +34,6 @@ public class CartServlet extends HttpServlet {
 		}
 
 		session.setAttribute("cart", cart);
-		session.setAttribute("grandTotal", cart.getGrandTotal());
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/cart.jsp");
 		dispatcher.forward(request, response);
 	}

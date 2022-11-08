@@ -40,13 +40,12 @@ public class Cart {
 		return new ArrayList<>(items.values());
 	}
 
-	public int getGrandTotal() {
-		int total = 0;
+	public BigDecimal getGrandTotal() {
+		int grandTotal = 0;
 		for (CartItem cartItem : this.getItemsAsList()) {
-			total += cartItem.getTotalPrice().intValue();
+			grandTotal += cartItem.getTotalPrice().intValue();
 		}
 
-		return total;
+		return BigDecimal.valueOf(grandTotal);
 	}
-
 }

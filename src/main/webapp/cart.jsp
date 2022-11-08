@@ -6,7 +6,6 @@
 <%@ page import="com.webshoppe.ecommerce.bean.Cart" %>
 <%
 Cart cart = (Cart) session.getAttribute("cart");
-int total = (int) session.getAttribute("grandTotal");
 %>
 <html>
     <head>
@@ -78,6 +77,6 @@ int total = (int) session.getAttribute("grandTotal");
         }
         %>
         <hr>
-        <h3>Grand Total: <%= total %></h3>
+        <h3>Grand Total: <%= cart.getGrandTotal() %></h3>
     </body>
 </html>
